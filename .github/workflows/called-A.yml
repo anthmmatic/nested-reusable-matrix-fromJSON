@@ -9,7 +9,7 @@ on:
     
 steps:
   job-A:
-    uses: ./.github/workflows/B.yml
+    uses: ./.github/workflows/called-B.yml
     strategy:
       matrix: ${{ fromJson(inputs.matrix-input) }}
     with:
