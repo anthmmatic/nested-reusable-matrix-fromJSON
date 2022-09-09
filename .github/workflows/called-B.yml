@@ -1,0 +1,15 @@
+name: Reusable B tier
+
+on:
+  workflow_call:
+    inputs:
+      value:
+        type: string
+        required: true
+
+jobs:
+  job-B:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo '${{ inputs.value }}'
