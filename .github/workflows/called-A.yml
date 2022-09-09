@@ -1,0 +1,16 @@
+name: Reusable A tier
+
+on:
+  workflow_call:
+    inputs:
+      matrix-input:
+        type: string
+        required: true
+    
+steps:
+  job-A:
+    uses: ./.github/workflows/B.yml
+    strategy:
+      matrix: ${{ fromJson(inputs.matrix-input) }}
+    with:
+      value: ${{ matrix.key }}
