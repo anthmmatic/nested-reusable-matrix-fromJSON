@@ -7,7 +7,7 @@ on:
         type: string
         required: true
     
-steps:
+jobs:
   job-A:
     uses: ./.github/workflows/called-B.yml
     strategy:
